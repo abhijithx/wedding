@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Amalu & Athul — We're Getting Married!</title>
+  <meta name="description" content="You are cordially invited to celebrate the wedding of Amalu and Athul on September 7, 2026 at St. George's Parish Hall, Purathodu, Idukki, Kerala." />
+  <meta name="theme-color" content="#FAF9F6" />
+  <meta property="og:title" content="Amalu & Athul — Wedding Invitation" />
+  <meta property="og:description" content="Join us as we celebrate our union on September 7, 2026." />
+  <meta property="og:type" content="website" />
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><text y='24' font-size='24'>💍</text></svg>" />
+</head>
+<body>
+  <!-- Three.js Canvas (injected dynamically) -->
+  <canvas id="three-canvas" aria-hidden="true"></canvas>
+
+  <!-- CSS Floral Fallback (shown on low-tier devices / WebGL failure) -->
+  <div class="css-floral-fallback" id="css-floral-fallback" style="display:none;" aria-hidden="true">
+    <img class="floral-element" src="/assets/florals/leaf-1.svg" alt="" loading="lazy" />
+    <img class="floral-element" src="/assets/florals/flower-pink.svg" alt="" loading="lazy" />
+    <img class="floral-element" src="/assets/florals/bud-burgundy.svg" alt="" loading="lazy" />
+    <img class="floral-element" src="/assets/florals/leaf-2.svg" alt="" loading="lazy" />
+  </div>
+
+  <!-- Static Floral Background (prefers-reduced-motion fallback) -->
+  <div class="static-floral-bg" aria-hidden="true"></div>
+
+  <!-- Fixed Floral Side Decoration (desktop) -->
+  <aside class="floral-side" id="floral-side" aria-hidden="true">
+    <img class="floral-side__element" src="/assets/florals/leaf-1.svg" alt="" />
+    <img class="floral-side__element" src="/assets/florals/flower-pink.svg" alt="" />
+    <img class="floral-side__element" src="/assets/florals/bud-burgundy.svg" alt="" />
+    <img class="floral-side__element" src="/assets/florals/grass-gold.svg" alt="" />
+    <img class="floral-side__element" src="/assets/florals/leaf-2.svg" alt="" />
+  </aside>
+
+  <!-- Main Content -->
+  <main class="content">
+
+    <!-- ===== HERO SECTION ===== -->
+    <section class="hero" id="hero">
+      <p class="hero__headline">We are getting married!</p>
+
+      <div class="hero__names">
+        <span class="hero__name hero__name--first">Amalu</span>
+        <span class="hero__ampersand">&amp;</span>
+        <span class="hero__name hero__name--second">Athul</span>
+      </div>
+
+      <p class="hero__subline">Cordially invite you to grace the occasion with your presence.</p>
+
+      <div class="hero__scroll-hint">
+        <span>Scroll</span>
+        <div class="scroll-line"></div>
+      </div>
+    </section>
+
+    <!-- ===== COUNTDOWN SECTION ===== -->
+    <section class="countdown" id="countdown">
+      <div class="gold-line" data-reveal></div>
+      <h2 class="countdown__title" data-reveal data-reveal-delay="1">Counting Down To Our Day</h2>
+      <div class="countdown__grid" data-reveal data-reveal-delay="2">
+        <div class="countdown__item">
+          <span class="countdown__number" id="countdown-days">--</span>
+          <span class="countdown__label">Days</span>
+        </div>
+        <div class="countdown__item">
+          <span class="countdown__number" id="countdown-hours">--</span>
+          <span class="countdown__label">Hours</span>
+        </div>
+        <div class="countdown__item">
+          <span class="countdown__number" id="countdown-minutes">--</span>
+          <span class="countdown__label">Minutes</span>
+        </div>
+        <div class="countdown__item">
+          <span class="countdown__number" id="countdown-seconds">--</span>
+          <span class="countdown__label">Seconds</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== SAVE THE DATE SECTION ===== -->
+    <section class="save-date" id="save-the-date">
+      <div class="gold-line" data-reveal></div>
+      <div class="save-date__block" data-reveal data-reveal-delay="1">
+        <span class="save-date__month">September</span>
+        <div class="save-date__rule"></div>
+        <div class="save-date__row">
+          <span class="save-date__day-name">Monday</span>
+          <span class="save-date__day-number">7</span>
+          <span class="save-date__time">At 12 PM</span>
+        </div>
+        <div class="save-date__rule"></div>
+        <span class="save-date__year">2026</span>
+      </div>
+    </section>
+
+    <!-- ===== VENUE & LOCATION SECTION ===== -->
+    <section class="venue" id="venue">
+      <div class="gold-line" data-reveal></div>
+      <h2 class="venue__title" data-reveal data-reveal-delay="1">Venue</h2>
+      <p class="venue__name" data-reveal data-reveal-delay="2">St. George's Parish Hall</p>
+      <p class="venue__address" data-reveal data-reveal-delay="3">Purathodu, Idukki, Kerala</p>
+
+      <div class="venue__map-container" data-reveal data-reveal-delay="3" id="map-container">
+        <div class="venue__map-placeholder" id="map-placeholder">
+          <span>📍 Loading map…</span>
+        </div>
+        <!-- Iframe inserted lazily by JS -->
+      </div>
+
+      <div class="venue__actions" data-reveal data-reveal-delay="4">
+        <a href="https://www.google.com/maps/search/?api=1&query=St.+George%27s+Parish+Hall,+Purathodu,+Idukki"
+           target="_blank"
+           rel="noopener noreferrer"
+           class="btn btn--primary"
+           id="btn-directions">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/>
+            <circle cx="12" cy="10" r="3"/>
+          </svg>
+          Get Directions
+        </a>
+      </div>
+
+      <!-- QR Code Block -->
+      <div class="qr-block" data-reveal data-reveal-delay="5">
+        <div class="qr-block__image" id="qr-code">
+          <!-- QR Code SVG generated inline -->
+          <svg viewBox="0 0 140 140" xmlns="http://www.w3.org/2000/svg">
+            <rect width="140" height="140" fill="#FAF9F6"/>
+            <!-- QR-like pattern (decorative placeholder) -->
+            <g fill="#2B2B2B">
+              <!-- Top-left finder -->
+              <rect x="10" y="10" width="35" height="35" rx="2"/>
+              <rect x="14" y="14" width="27" height="27" rx="1" fill="#FAF9F6"/>
+              <rect x="19" y="19" width="17" height="17" rx="1" fill="#2B2B2B"/>
+              <!-- Top-right finder -->
+              <rect x="95" y="10" width="35" height="35" rx="2"/>
+              <rect x="99" y="14" width="27" height="27" rx="1" fill="#FAF9F6"/>
+              <rect x="104" y="19" width="17" height="17" rx="1" fill="#2B2B2B"/>
+              <!-- Bottom-left finder -->
+              <rect x="10" y="95" width="35" height="35" rx="2"/>
+              <rect x="14" y="99" width="27" height="27" rx="1" fill="#FAF9F6"/>
+              <rect x="19" y="104" width="17" height="17" rx="1" fill="#2B2B2B"/>
+              <!-- Data modules (decorative) -->
+              <rect x="55" y="12" width="5" height="5"/>
+              <rect x="65" y="12" width="5" height="5"/>
+              <rect x="75" y="12" width="5" height="5"/>
+              <rect x="55" y="22" width="5" height="5"/>
+              <rect x="75" y="22" width="5" height="5"/>
+              <rect x="55" y="32" width="5" height="5"/>
+              <rect x="65" y="32" width="5" height="5"/>
+              <rect x="12" y="55" width="5" height="5"/>
+              <rect x="22" y="55" width="5" height="5"/>
+              <rect x="32" y="55" width="5" height="5"/>
+              <rect x="12" y="65" width="5" height="5"/>
+              <rect x="32" y="65" width="5" height="5"/>
+              <rect x="12" y="75" width="5" height="5"/>
+              <rect x="22" y="75" width="5" height="5"/>
+              <rect x="32" y="75" width="5" height="5"/>
+              <rect x="55" y="55" width="5" height="5"/>
+              <rect x="65" y="55" width="5" height="5"/>
+              <rect x="75" y="55" width="5" height="5"/>
+              <rect x="55" y="65" width="5" height="5"/>
+              <rect x="75" y="65" width="5" height="5"/>
+              <rect x="55" y="75" width="5" height="5"/>
+              <rect x="65" y="75" width="5" height="5"/>
+              <rect x="75" y="75" width="5" height="5"/>
+              <rect x="85" y="55" width="5" height="5"/>
+              <rect x="95" y="55" width="5" height="5"/>
+              <rect x="105" y="55" width="5" height="5"/>
+              <rect x="115" y="55" width="5" height="5"/>
+              <rect x="95" y="65" width="5" height="5"/>
+              <rect x="115" y="65" width="5" height="5"/>
+              <rect x="85" y="75" width="5" height="5"/>
+              <rect x="95" y="75" width="5" height="5"/>
+              <rect x="55" y="95" width="5" height="5"/>
+              <rect x="65" y="95" width="5" height="5"/>
+              <rect x="75" y="95" width="5" height="5"/>
+              <rect x="85" y="95" width="5" height="5"/>
+              <rect x="55" y="105" width="5" height="5"/>
+              <rect x="85" y="105" width="5" height="5"/>
+              <rect x="105" y="95" width="5" height="5"/>
+              <rect x="115" y="95" width="5" height="5"/>
+              <rect x="125" y="95" width="5" height="5"/>
+              <rect x="55" y="115" width="5" height="5"/>
+              <rect x="65" y="115" width="5" height="5"/>
+              <rect x="75" y="115" width="5" height="5"/>
+              <rect x="85" y="115" width="5" height="5"/>
+              <rect x="95" y="115" width="5" height="5"/>
+              <rect x="105" y="105" width="5" height="5"/>
+              <rect x="115" y="105" width="5" height="5"/>
+              <rect x="125" y="115" width="5" height="5"/>
+              <rect x="125" y="125" width="5" height="5"/>
+              <rect x="105" y="125" width="5" height="5"/>
+            </g>
+            <!-- Heart in center -->
+            <g transform="translate(60, 80) scale(0.6)">
+              <path d="M10 20 Q10 10 0 5 Q-5 2 -10 7 Q-10 2 -15 5 Q-25 10 -25 18 Q-25 28 -10 35 Q-5 37 -10 35 Q10 28 10 20Z" 
+                    fill="#7A2E3A" transform="translate(15, -15) scale(0.8)"/>
+            </g>
+          </svg>
+        </div>
+        <span class="qr-block__label">Save the Date</span>
+      </div>
+    </section>
+
+    <!-- ===== CLOSING / FOOTER ===== -->
+    <section class="closing" id="closing">
+      <div class="gold-line" data-reveal></div>
+      <p class="closing__message" data-reveal data-reveal-delay="1">
+        We can't wait to celebrate<br>with you
+      </p>
+      <p class="closing__names" data-reveal data-reveal-delay="2">Amalu & Athul</p>
+      <img class="closing__divider" src="/assets/florals/divider-heart.svg" alt="" data-reveal data-reveal-delay="3" />
+      <p class="closing__footer" data-reveal data-reveal-delay="4">
+        September 7, 2026 · Purathodu, Idukki, Kerala
+      </p>
+    </section>
+
+  </main>
+
+  <script type="module" src="/src/main.ts"></script>
+</body>
+</html>

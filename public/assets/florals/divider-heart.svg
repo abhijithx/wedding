@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 20" fill="none">
+  <!-- Heart + arrow ornament divider -->
+  <g opacity="0.6">
+    <!-- Left arrow line -->
+    <line x1="20" y1="10" x2="85" y2="10" stroke="#B0B0B0" stroke-width="0.8"/>
+    <!-- Left arrowhead -->
+    <path d="M20 10 L28 7 M20 10 L28 13" stroke="#B0B0B0" stroke-width="0.8" stroke-linecap="round"/>
+    <!-- Heart -->
+    <path d="M100 15 Q100 8 95 5 Q90 2 90 7 Q90 2 85 5 Q80 8 80 12 Q80 16 90 20 Q92 21 90 20 Q100 16 100 15 Z" 
+          transform="translate(5, -5) scale(0.9)" 
+          stroke="#B0B0B0" stroke-width="0.8" fill="none"/>
+    <!-- Right arrow line -->
+    <line x1="115" y1="10" x2="180" y2="10" stroke="#B0B0B0" stroke-width="0.8"/>
+    <!-- Right arrowhead -->
+    <path d="M180 10 L172 7 M180 10 L172 13" stroke="#B0B0B0" stroke-width="0.8" stroke-linecap="round"/>
+  </g>
+</svg>

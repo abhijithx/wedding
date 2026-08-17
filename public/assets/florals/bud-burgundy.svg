@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 90" fill="none">
+  <!-- Burgundy bud -->
+  <g opacity="0.85">
+    <path d="M25 85 Q24 60 25 40" stroke="#5a6b50" stroke-width="1.2" fill="none" stroke-linecap="round"/>
+    <!-- Bud shape -->
+    <path d="M25 40 Q18 30 20 18 Q22 8 25 5 Q28 8 30 18 Q32 30 25 40Z" fill="#7A2E3A" opacity="0.8"/>
+    <path d="M25 38 Q20 28 22 18 Q24 10 25 8 Q26 10 28 18 Q30 28 25 38Z" fill="#8B3A4A" opacity="0.6"/>
+    <!-- Small leaves at base -->
+    <ellipse cx="20" cy="50" rx="8" ry="5" transform="rotate(-30 20 50)" fill="#A8B5A0" opacity="0.5"/>
+    <ellipse cx="30" cy="48" rx="7" ry="4" transform="rotate(25 30 48)" fill="#A8B5A0" opacity="0.45"/>
+  </g>
+</svg>
